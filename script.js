@@ -1,56 +1,33 @@
-// pergunta a idade 
-
-let idade = prompt(" Digite sua idade:");
-
-// verifica a idade 
-
-if (idade >=18) {
-    console.log("você é maior de idade.");
-} else {
-    console.log("você é menor de idade.");
-}
+// exemplos de operacoes
 
 
-// par ou impar 
 
-let ParouImpar = prompt(" insira um numero:");
+function calculadora(a, b, operacao) {
+    switch (operacao) {
 
+        case 'soma':
+            return a + b;
 
-function verificaParouImpar(numero) {
-    if (numero % 2 === 0) {
-          return "Par";
-       } else {
-          return "Impar";
-       }
+        case 'subtracao':
+            return a - b;
+        case 'multiplicacao':
+
+            return a * b;
+        case 'divisao':
+            if (b === 0) {
+                return 'Erro: Divisão por zero';
+            }
+            return a / b;
+        default:
+            return 'Operação inválida';
     }
-
-let resultado = verificaParouImpar(567);
-console.log(resultado);
-
-
-// solicita ao usuario para inserir um numero 
-
-let numero = parseFloat(prompt("Digite um numero:") );
-
-// verifica se é positivo, negativo ou zero 
-
-if (numero > 0) {
-    console.log("Numero positivo");
-} else if (numero < 0) {
-    console.log("Numero negativo");
-} else {
-    console.log("Zero");
 }
 
+// Exemplos de calculo
 
-
-
-
-
-
-
-
-
-
-
-
+console.log(calculadora(25, 20, 'soma')); 
+console.log(calculadora(95, 35, 'subtracao')); 
+console.log(calculadora(10, 5, 'multiplicacao')); 
+console.log(calculadora(5, 0, 'divisao')); 
+console.log(calculadora(75, 5, 'divisao')); 
+console.log(calculadora(10, 5, "modulo")); 
